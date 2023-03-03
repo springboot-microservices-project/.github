@@ -1,8 +1,8 @@
 # Welcome to Springboot Microservices Project
 
-This repo is private just for member only.
+This organization is private just for member only.
 
-## what inside on this repo
+## what inside on this organization
 
 ### documentation
 - FSD
@@ -13,7 +13,7 @@ This repo is private just for member only.
 - Api Collection postman
 - Product Backlog
 
-### project
+### projects
 - discovery service
 - api gateway
 - master service
@@ -41,6 +41,9 @@ This repo is private just for member only.
 - logback
 - prometheus
 - grafana
+
+
+
 
 <!--
 ## Welcome👋 Happy Coding & Keep Learning 🚀
