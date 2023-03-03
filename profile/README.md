@@ -1,6 +1,6 @@
 # Welcome to Springboot Microservices Project
 
-## This repo is private just for member only.
+This repo is private just for member only.
 
 ## what inside on this repo
 
