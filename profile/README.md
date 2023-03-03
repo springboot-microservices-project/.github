@@ -1,8 +1,49 @@
-## Welcome to Coder Mate 👋 Happy Coding & Keep Learning 🚀
+# Welcome to Springboot Microservices Project
 
+## This repo is private just for member only.
 
+## what inside on this repo
+
+### documentation
+- FSD
+- TSD
+- Diagram and Arsitektur (drawio)
+- ERD (plan uml)
+- Figma prototype
+- Api Collection postman
+- Product Backlog
+
+### project
+- discovery service
+- api gateway
+- master service
+- transaction service
+- schmaster service
+- schtransaction service
+- inventory service
+- mail service
+- report service
+
+### technology
+- http1 rest
+- springboot
+- Oauth0
+- JWT
+- mysql
+- redis
+- rabbitmq
+- smpt gmail
+- report
+- audit
+- liquibase 
+- springcloud-gateway
+- discovery service
+- logback
+- prometheus
+- grafana
 
 <!--
+## Welcome👋 Happy Coding & Keep Learning 🚀
 
 **Here are some ideas to get you started:**
 
