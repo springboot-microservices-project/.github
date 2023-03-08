@@ -16,6 +16,7 @@ This organization is private just for member only.
 ### projects
 - discovery service
 - api gateway
+- auth service
 - master service
 - transaction service
 - schmaster service
