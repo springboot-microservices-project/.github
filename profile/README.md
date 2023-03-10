@@ -14,16 +14,21 @@ This organization is private just for member only.
 - Product Backlog
 
 ### projects
-- discovery service
-- api gateway
-- auth service
-- master service
-- transaction service
-- schmaster service
-- schtransaction service
-- inventory service
-- mail service
-- report service
+
+#### repository
+| Project Name     | Description  | URL Repository                                                          | 
+|------------------|--------------|-------------------------------------------------------------------------|
+| discovery-service | discovery service | https://github.com/denitone/springboot-microservices-discovery                                     |
+| gateway-service | api gateway service | https://github.com/denitone/springboot-microservices-gateway                                     |
+| auth-service | auth service | https://github.com/denitone/springboot-microservices-auth                                     |
+| master-service | master service | https://github.com/denitone/springboot-microservices-                                     |
+| transaction-service | transaction service | https://github.com/denitone/springboot-microservices-transaction                                     |
+| schmaster-service | schmaster service | https://github.com/denitone/springboot-microservices-schmaster                                     |
+| schtransaction-service | schtransaction service | https://github.com/denitone/springboot-microservices-schtransaction                                     |
+| inventory-service | inventory service | https://github.com/denitone/springboot-microservices-inventory                                     |
+| mail-service | mail service | https://github.com/denitone/springboot-microservices-mail                                     |
+| report-service | service | https://github.com/denitone/springboot-microservices-report                                     |
+
 
 ### technology
 - http1 rest
