@@ -49,7 +49,7 @@ Learn how to create backend server with Microservices Architectur.
 | discovery-service | discovery service | https://github.com/denitone/springboot-microservices-discovery                                     |
 | gateway-service | api gateway service | https://github.com/denitone/springboot-microservices-gateway                                     |
 | auth-service | auth service | https://github.com/denitone/springboot-microservices-auth                                     |
-| master-service | master service | https://github.com/denitone/springboot-microservices-                                     |
+| master-service | master service | https://github.com/denitone/springboot-microservices-master                                     |
 | transaction-service | transaction service | https://github.com/denitone/springboot-microservices-transaction                                     |
 | schmaster-service | schmaster service | https://github.com/denitone/springboot-microservices-schmaster                                     |
 | schtransaction-service | schtransaction service | https://github.com/denitone/springboot-microservices-schtransaction                                     |
