@@ -2,7 +2,8 @@
 
 This organization is private just for member only.
 
-### documentation
+## Documentation
+### Documents type
 - FSD
 - TSD
 - Diagram and Arsitektur (drawio)
@@ -18,7 +19,7 @@ This organization is private just for member only.
 
 
 
-## Repository
+## Project
 ### technology Stack
 - microservices
 - api gateway
