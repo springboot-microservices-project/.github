@@ -1,6 +1,6 @@
 # Welcome to Springboot Microservices Project
 
-This organization is private just for member only.
+Learn how to create backend server with Microservices Architectur.
 
 ## Documentation
 ### Documents type
