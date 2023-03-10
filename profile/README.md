@@ -54,7 +54,7 @@ Learn how to create backend server with Microservices Architectur.
 | schmaster-service | schmaster service | https://github.com/denitone/springboot-microservices-schmaster                                     |
 | schtransaction-service | schtransaction service | https://github.com/denitone/springboot-microservices-schtransaction                                     |
 | inventory-service | inventory service | https://github.com/denitone/springboot-microservices-inventory                                     |
-| mail-service | mail service | https://github.com/denitone/springboot-microservices-mail                                     |
+| mail-service | mail service | https://github.com/denitone/springboot-microservices-email                                     |
 | report-service | service | https://github.com/denitone/springboot-microservices-report                                     |
 
 
