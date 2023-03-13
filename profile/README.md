@@ -51,7 +51,7 @@ Learn how to create backend server with Microservices Architectur.
 | auth-service | private | https://github.com/denitiawan/springboot-microservices-auth                                     |
 | master-service | private | https://github.com/denitiawan/springboot-microservices-master                                     |
 | transaction-service | private | https://github.com/denitiawan/springboot-microservices-transaction                                     |
-| schmaster-service | privatee | https://github.com/denitiawan/springboot-microservices-schmaster                                     |
+| schmaster-service | private | https://github.com/denitiawan/springboot-microservices-schmaster                                     |
 | schtransaction-service | private | https://github.com/denitiawan/springboot-microservices-schtransaction                                     |
 | inventory-service | private | https://github.com/denitiawan/springboot-microservices-inventory                                     |
 | mail-service | private | https://github.com/denitiawan/springboot-microservices-email                                     |
