@@ -44,17 +44,17 @@ Learn how to create backend server with Microservices Architectur.
 
 
 #### repository
-| Project Name     | Description  | URL Repository                                                          | 
+| Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
-| discovery-service | discovery service | https://github.com/denitiawan/springboot-microservices-discovery                                     |
-| gateway-service | api gateway service | https://github.com/denitiawan/springboot-microservices-gateway                                     |
-| auth-service | auth service | https://github.com/denitiawan/springboot-microservices-auth                                     |
-| master-service | master service | https://github.com/denitiawan/springboot-microservices-master                                     |
-| transaction-service | transaction service | https://github.com/denitiawan/springboot-microservices-transaction                                     |
-| schmaster-service | schmaster service | https://github.com/denitiawan/springboot-microservices-schmaster                                     |
-| schtransaction-service | schtransaction service | https://github.com/denitiawan/springboot-microservices-schtransaction                                     |
-| inventory-service | inventory service | https://github.com/denitiawan/springboot-microservices-inventory                                     |
-| mail-service | mail service | https://github.com/denitiawan/springboot-microservices-email                                     |
-| report-service | service | https://github.com/denitiawan/springboot-microservices-report                                     |
+| discovery-service | private | https://github.com/denitiawan/springboot-microservices-discovery                                     |
+| gateway-service | privatee | https://github.com/denitiawan/springboot-microservices-gateway                                     |
+| auth-service | private | https://github.com/denitiawan/springboot-microservices-auth                                     |
+| master-service | private | https://github.com/denitiawan/springboot-microservices-master                                     |
+| transaction-service | private | https://github.com/denitiawan/springboot-microservices-transaction                                     |
+| schmaster-service | privatee | https://github.com/denitiawan/springboot-microservices-schmaster                                     |
+| schtransaction-service | private | https://github.com/denitiawan/springboot-microservices-schtransaction                                     |
+| inventory-service | private | https://github.com/denitiawan/springboot-microservices-inventory                                     |
+| mail-service | private | https://github.com/denitiawan/springboot-microservices-email                                     |
+| report-service | private | https://github.com/denitiawan/springboot-microservices-report                                     |
 
 
