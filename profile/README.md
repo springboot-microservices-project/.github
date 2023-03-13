@@ -47,7 +47,7 @@ Learn how to create backend server with Microservices Architectur.
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
 | discovery-service | private | https://github.com/denitiawan/springboot-microservices-discovery                                     |
-| gateway-service | privatee | https://github.com/denitiawan/springboot-microservices-gateway                                     |
+| gateway-service | private | https://github.com/denitiawan/springboot-microservices-gateway                                     |
 | auth-service | private | https://github.com/denitiawan/springboot-microservices-auth                                     |
 | master-service | private | https://github.com/denitiawan/springboot-microservices-master                                     |
 | transaction-service | private | https://github.com/denitiawan/springboot-microservices-transaction                                     |
