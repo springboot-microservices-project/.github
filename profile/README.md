@@ -84,14 +84,14 @@ Here we will learning how to create backend service with microservices architect
 | report-service | private | https://github.com/denitiawan/springboot-microservices-report                                     |
 
 
-### 1.3. Documentation
-- FSD
-- TSD
-- Diagram and Arsitektur (drawio)
-- ERD (plan uml)
-- Figma prototype
-- Api Collection postman
-- Product Backlog
+### 1.3. Documentation Types
+`FSD`
+`TSD`
+`Diagram and Arsitektur (drawio)`
+`ERD (plan uml)`
+`Figma prototype`
+`Api Collection postman`
+`Product Backlog`
 
 
 ### 1.3.1 repository
