@@ -14,28 +14,28 @@ My Name is **Deni Setiawan**, I am **Backend Dev & System Analyst** at http://ne
 Here we will learning how to create backend service with microservices architecture using springboot framework, and all services will run on docker containers, for simplify developement, deployment and testing
 
 ### 1.1. Overviews
-- Implement Microservices Architectures on Springboot Projects as a backend services
-- Implement Discovery services for automatic registration all services and automatic find ip and hostname
-- Implement Gateway services for routing every end point on microservices
-- Implement Auth services, with basic authentication, for handling the authentication & authorization, for all microservices
-- Implement Redis for memory cache and saving the authentication token
-- Implement Master Service for handling all master datas
-- Implement Transaction Service for handling all transaction datas
-- Implement Inventory Service for handling all inventory datas
-- Implement schmaster service for handling search data master using elasticsearch
-- Implement schtransaction service for handling search data transaction using elasticsearch
-- Implement CQRS (Command Query Responsibile Segregation), used for split (insert, update, delete) to SQL and (select) to NoSQL
-- Implement Message broker using RabbitMQ for Async task used when microservices will sending data and receive data
-- Implement Email Service for handling email sending, data will receive from rabbitMQ
-- Implement Report Service for handling report Generator, data will receive from rabbitMQ
-- Implement Logging using logback
-- Implement spring actuator on gateway service, for monitoring and tracking every endpoint using metric 
-- Implement resilence4j on gawateway service, for handling ratelimiter and circuit breaker on every end point
-- Implement Monitoring API using Prometheus and Grafana
-- Implementat a Dockerfile to all services for creating the docker images 
-- Implement push docker image to dockerhub [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/repositories/denitiawan)
-- Implement docker-compose, for configure, setup and running the all services
-- Implement database migration on every microservices using liquibase
+- Implement **Microservices Architectures** on Springboot Projects as a backend services
+- Implement **Discovery services** using **Eureka Server** for automatic registration all services and automatic find ip and hostname
+- Implement **Gateway services** using **Springcloud gateway** for routing every end point on microservices
+- Implement **Auth services** with basic authentication, for handling the authentication & authorization, for all microservices
+- Implement **Redis** for memory cache and saving the authentication token
+- Implement **Master Service** for handling all master datas
+- Implement **Transaction Service** for handling all transaction datas
+- Implement **Inventory Service** for handling all inventory datas
+- Implement **schmaster service** for handling search data master using elasticsearch
+- Implement **schtransaction service** for handling search data transaction using elasticsearch
+- Implement **CQRS** (Command Query Responsibile Segregation), used for split (insert, update, delete) to SQL and (select) to NoSQL
+- Implement **Message broker** using RabbitMQ for Async task used when microservices will sending data and receive data
+- Implement **Email Service** for handling email sending, data will receive from rabbitMQ
+- Implement **Report Service** for handling report Generator, data will receive from rabbitMQ
+- Implement **Logging** using **logback**
+- Implement **spring actuator** on gateway service, for monitoring and tracking every endpoint using metric 
+- Implement **resilence4j** on gawateway service, for handling ratelimiter and circuit breaker on every end point
+- Implement **Monitoring API** using **Prometheus and Grafana**
+- Implementat a **Dockerfile** to all services for creating the docker images 
+- Implement push docker image to **dockerhub** [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/repositories/denitiawan)
+- Implement **docker-compose** for configure, setup and running the all services
+- Implement **database migration** on every microservices using **liquibase**
 
 
 ### 1.2. Backend Technologies
@@ -105,7 +105,7 @@ Here we will learning how to create backend service with microservices architect
 # 
 
 
-# 2. Run application using Docker Compose
+# 2. How to run the application? you can try it using Docker Compose
 - clone `setup` repository on this link https://github.com/springboot-microservices-project/setup
 - after clone, open folder `./docker-compose/spring_microservices` in `terminal` or `cmd`
 - on `terminal` or `cmd` type this commands `docker-compose up -d`
@@ -126,7 +126,7 @@ Here we will learning how to create backend service with microservices architect
 - see TTL `ttl <keyname>`
 
 ### 2.2.3.   Api Collection (Postman)
-- see on this link [DRP.postman_collection.json](https://github.com/dockerize-react-project/postman/DRP.postman_collection.json)
+- see on this link [Springboot-Microservices.postman_collection.json](https://github.com/denitiawan/springboot-microservices-documentation/blob/main/environtment/api-collections/collection/Springboot-Microservices_v0.0.5.postman_collection.json)
 
 | Name | URL | Method | body |
 |--------|--------|--------|--------|
