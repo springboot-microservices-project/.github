@@ -92,6 +92,8 @@ Here we will learning how to create backend service with microservices architect
 `Figma prototype`
 `Api Collection postman`
 `Product Backlog`
+`docker-compose.yml`
+`all technical notes`
 
 
 ### 1.3.1 repository
