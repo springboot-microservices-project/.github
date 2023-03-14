@@ -38,7 +38,7 @@ Here we will learning how to create backend service with microservices architect
 - Implement database migration on every microservices using liquibase
 
 
-### 1.2. Backend
+### 1.2. Backend Technologies
 `Springboot 2.7^`
 `Java 11`
 `Spring Security`
