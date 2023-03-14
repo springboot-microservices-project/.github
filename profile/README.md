@@ -14,8 +14,8 @@ My Name is **Deni Setiawan**, I am **Backend Dev & System Analyst** at http://ne
 Here we will learning how to create backend service with microservices architecture using springboot framework, and all services will run on docker containers, for simplify developement, deployment and testing
 
 ### 1.1. Overviews
-- Created Backend Services with microservices architectures using springboot framework
-- Implement Discovery services
+- Implement Microservices Architectures on Springboot Projects as a backend services
+- Implement Discovery services for automatic registration all services and automatic find ip and hostname
 - Implement Gateway services for routing every end point on microservices
 - Implement Auth services, with basic authentication, for handling the authentication & authorization, for all microservices
 - Implement Redis for memory cache and saving the authentication token
