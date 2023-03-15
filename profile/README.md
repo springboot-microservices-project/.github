@@ -104,7 +104,7 @@ Here we will learning how to create backend service with microservices architect
 #### 1.3.1 Repositories
 | Project Name     | Visibility     | Description  | URL Repository                                                          | 
 |------------------|--------------|--------------|-------------------------------------------------------------------------|
-| drp-web | private | Web project | https://github.com/denitiawan/springboot-microservices-web                                         |
+| Web C-Panel | private | Web project | https://github.com/denitiawan/springboot-microservices-web                                         |
 
 
 ### 1.4. Documentation Types
