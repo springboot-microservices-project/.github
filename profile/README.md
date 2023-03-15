@@ -85,7 +85,7 @@ Here we will learning how to create backend service with microservices architect
 
 
 
-### 1.2. Frontend Technologies
+### 1.3. Frontend Technologies
 `React.js`
 `Redux Multi Store`
 `i18n Multi Resource`
@@ -101,13 +101,13 @@ Here we will learning how to create backend service with microservices architect
 `Docker-compose`
 
 
-### 1.4. Repositories
+#### 1.3.1 Repositories
 | Project Name     | Visibility     | Description  | URL Repository                                                          | 
 |------------------|--------------|--------------|-------------------------------------------------------------------------|
 | drp-web | private | Web project | https://github.com/denitiawan/springboot-microservices-web                                         |
 
 
-### 1.3. Documentation Types
+### 1.4. Documentation Types
 `FSD`
 `TSD`
 `Diagram and Arsitektur (drawio)`
@@ -119,7 +119,7 @@ Here we will learning how to create backend service with microservices architect
 `all technical notes`
 
 
-### 1.3.1 repository
+### 1.4.1 repository
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
 | documentation-service | private | https://github.com/denitiawan/springboot-microservices-documentation                                     |
