@@ -84,6 +84,29 @@ Here we will learning how to create backend service with microservices architect
 | report-service | private | https://github.com/denitiawan/springboot-microservices-report                                     |
 
 
+
+### 1.2. Frontend Technologies
+`React.js`
+`Redux Multi Store`
+`i18n Multi Resource`
+`Router`
+`Secure Routing`
+`Error Boundaries`
+`Variable Environtment .env`
+`React Hook`
+`Functional Component`
+`Loggin`
+`axios`
+`Docker`
+`Docker-compose`
+
+
+### 1.4. Repositories
+| Project Name     | Visibility     | Description  | URL Repository                                                          | 
+|------------------|--------------|--------------|-------------------------------------------------------------------------|
+| drp-web | private | Web project | https://github.com/denitiawan/springboot-microservices-web                                         |
+
+
 ### 1.3. Documentation Types
 `FSD`
 `TSD`
