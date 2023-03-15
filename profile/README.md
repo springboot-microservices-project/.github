@@ -134,11 +134,13 @@ Here we will learning how to create backend service with microservices architect
 - on `terminal` or `cmd` type this commands `docker-compose up -d`
 - wait until all aplication running well
 
-## 2.1.  Test Backend
-| container     | URL      | client access |
+## 2.1.  Testing
+| Name     | URL      | client access |
 |--------|--------------|--------------|
-| discovery-service  | http://localhost:8761 | Browser |
-
+| Web C-Panel | http://localhost:3006 | Browser |
+| Discovery Server  | http://localhost:8761 | Browser |
+| Grafana Server  | http://localhost:3000 | Browser |
+| Prometheus Server  | http://localhost:9090 | Browser |
 
 ### 2.2.1. Redis CLI
 - open cmd
