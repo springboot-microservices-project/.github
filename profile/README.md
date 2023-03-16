@@ -72,16 +72,16 @@ Here we will learning how to create backend service with microservices architect
 #### 1.2.1. Repositories
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
-| discovery-service | private | https://github.com/denitiawan/springboot-microservices-discovery                                     |
-| gateway-service | private | https://github.com/denitiawan/springboot-microservices-gateway                                     |
-| auth-service | private | https://github.com/denitiawan/springboot-microservices-auth                                     |
-| master-service | private | https://github.com/denitiawan/springboot-microservices-master                                     |
-| transaction-service | private | https://github.com/denitiawan/springboot-microservices-transaction                                     |
-| schmaster-service | private | https://github.com/denitiawan/springboot-microservices-schmaster                                     |
-| schtransaction-service | private | https://github.com/denitiawan/springboot-microservices-schtransaction                                     |
-| inventory-service | private | https://github.com/denitiawan/springboot-microservices-inventory                                     |
-| mail-service | private | https://github.com/denitiawan/springboot-microservices-email                                     |
-| report-service | private | https://github.com/denitiawan/springboot-microservices-report                                     |
+| discovery-service | private | [...](https://github.com/denitiawan/springboot-microservices-discovery) |
+| gateway-service | private | [...](https://github.com/denitiawan/springboot-microservices-gateway) |
+| auth-service | private | [...](https://github.com/denitiawan/springboot-microservices-auth) |
+| master-service | private | [...](https://github.com/denitiawan/springboot-microservices-master) |
+| transaction-service | private | [...](https://github.com/denitiawan/springboot-microservices-transaction) |
+| schmaster-service | private | [...](https://github.com/denitiawan/springboot-microservices-schmaster) |
+| schtransaction-service | private | [...](https://github.com/denitiawan/springboot-microservices-schtransaction) |
+| inventory-service | private | [...](https://github.com/denitiawan/springboot-microservices-inventory) |
+| mail-service | private | [...](https://github.com/denitiawan/springboot-microservices-email) |
+| report-service | private | [...](https://github.com/denitiawan/springboot-microservices-report) |
 
 
 
@@ -104,7 +104,7 @@ Here we will learning how to create backend service with microservices architect
 #### 1.3.1 Repositories
 | Project Name     | Visibility     | Description  | URL Repository                                                          | 
 |------------------|--------------|--------------|-------------------------------------------------------------------------|
-| Web C-Panel | private | Web project | https://github.com/denitiawan/springboot-microservices-web                                         |
+| Web C-Panel | private | Web project | [...](https://github.com/denitiawan/springboot-microservices-web) |
 
 
 ### 1.4. Documentation Types
@@ -122,7 +122,7 @@ Here we will learning how to create backend service with microservices architect
 ### 1.4.1 repository
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
-| documentation-service | private | https://github.com/denitiawan/springboot-microservices-documentation                                     |
+| documentation-service | private | [...](https://github.com/denitiawan/springboot-microservices-documentation) |
 
 
 # 
