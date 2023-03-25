@@ -1,6 +1,6 @@
 # Welcome 
 
-My Name is **Deni Setiawan**, I am **Backend Dev & System Analyst** at http://nexsoft.co.id/ from Indonesia.
+My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsoft.co.id/ from Indonesia.
 **Loves writing and coding enthusiast** who always **keeps learning** about software engineering skills for make me **keep an update and strenghts skills** 🚀
 
 
@@ -11,12 +11,13 @@ My Name is **Deni Setiawan**, I am **Backend Dev & System Analyst** at http://ne
 | Medium | https://deni-setiawan.medium.com/ |
 
 # 1. what is 'Springboot Microservices Project'
-Here we will learning how to create backend service with microservices architecture using springboot framework, and all services will run on docker containers, for simplify developement, deployment and testing
+This project already implementation of Microservice using Springboot, and also implements Spring Cloud Gateway, Discovery, Rate Limmiter, Circuit Breaker, OAuth, RabbitMq, Redis, Elastic Search, Log Back, Liquibase, Prometheus, Grafana, etc. and finaly all services will run on docker containers, for simplify develop, deploy and testing
 
 ### 1.1. Overviews
 - Implement **Microservices Architectures** on Springboot Projects as a backend services
 - Implement **Discovery services** using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement **Gateway services** using **Springcloud gateway** for routing every end point on microservices
+- Implement **CORS** (Control-Origin Resource Server), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
 - Implement **Auth services** with basic authentication, for handling the authentication & authorization, for all microservices
 - Implement **Redis** for memory cache and saving the authentication token
 - Implement **Master Service** for handling all master datas
