@@ -15,20 +15,20 @@ This project already implementation of Microservice using Springboot, and also i
 
 ### 1.1. Overviews
 - Implement **Microservices Architectures** on Springboot Projects as a backend services
-- Implement **Discovery services** using **Eureka Server** for automatic registration all services and automatic find ip and hostname
-- Implement **Gateway services** using **Springcloud gateway** for routing every end point on microservices
+- Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
+- Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
 - Implement **CORS** (Control-Origin Resource Server), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
 - Implement  [**Auth services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md)  with basic authentication, for handling the authentication & authorization, for all microservices
 - Implement **Redis** for memory cache and saving the authentication token
-- Implement **Master Service** for handling all master datas
-- Implement **Transaction Service** for handling all transaction datas
-- Implement **Inventory Service** for handling all inventory datas
-- Implement **schmaster service** for handling search data master using elasticsearch
-- Implement **schtransaction service** for handling search data transaction using elasticsearch
+- Implement [**Master Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/master-service/readme.md) for handling all master datas
+- Implement [**Transaction Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/trans-service/readme.md) for handling all transaction datas
+- Implement [**Inventory Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/inventory-service/readme.md) for handling all inventory datas
+- Implement [**schmaster service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schmaster-service/readme.md) for handling search data master using elasticsearch
+- Implement [**schtransaction service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schtransaction-service/readme.md) for handling search data transaction using elasticsearch
 - Implement **CQRS** (Command Query Responsibile Segregation), used for split (insert, update, delete) to SQL and (select) to NoSQL
 - Implement **Message broker** using RabbitMQ for Async task used when microservices will sending data and receive data
-- Implement **Email Service** for handling email sending, data will receive from rabbitMQ
-- Implement **Report Service** for handling report Generator, data will receive from rabbitMQ
+- Implement [**Email Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/email-service/readme.md) for handling email sending, data will receive from rabbitMQ
+- Implement [**Report Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/report-service/readme.md) for handling report Generator, data will receive from rabbitMQ
 - Implement **Logging** using **logback**
 - Implement **spring actuator** on gateway service, for monitoring and tracking every endpoint using metric 
 - Implement **resilence4j** on gawateway service, for handling ratelimiter and circuit breaker on every end point
