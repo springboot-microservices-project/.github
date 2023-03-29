@@ -11,7 +11,7 @@ My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsof
 | Medium | https://deni-setiawan.medium.com/ |
 
 # 1. what is 'Springboot Microservices Project'
-This project already implementation of Microservice using Springboot, and also implements Spring Cloud Gateway, Discovery, Rate Limmiter, Circuit Breaker, OAuth, RabbitMq, Redis, Elastic Search, Log Back, Liquibase, Prometheus, Grafana, etc. and finaly all services will run on docker containers, for simplify develop, deploy and testing
+This is an backend server with Microservice architecture made using Springboot and frontend made using react. and also implements Spring Cloud Gateway, Discovery, Rate Limmiter, Circuit Breaker, OAuth, RabbitMq, Redis, Elastic Search, Log Back, Liquibase, Prometheus, Grafana, etc. and finaly all services will run on docker containers, for simplify develop, deploy and testing
 
 ### 1.1. Overviews
 - Implement **Microservices Architectures** on Springboot Projects as a backend services
