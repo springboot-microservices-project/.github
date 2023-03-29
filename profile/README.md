@@ -18,7 +18,7 @@ This project already implementation of Microservice using Springboot, and also i
 - Implement **Discovery services** using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement **Gateway services** using **Springcloud gateway** for routing every end point on microservices
 - Implement **CORS** (Control-Origin Resource Server), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
-- Implement **Auth services** with basic authentication, for handling the authentication & authorization, for all microservices
+- Implement  [**Auth services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md)  with basic authentication, for handling the authentication & authorization, for all microservices
 - Implement **Redis** for memory cache and saving the authentication token
 - Implement **Master Service** for handling all master datas
 - Implement **Transaction Service** for handling all transaction datas
@@ -160,5 +160,7 @@ This project already implementation of Microservice using Springboot, and also i
 | Login | http://localhost:8181/login  | POST |{"username":"admin","password":"admin"} |
 | . . . | . . . | . . . | . . . |
 
+
+[auth-service](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md)
 
 
