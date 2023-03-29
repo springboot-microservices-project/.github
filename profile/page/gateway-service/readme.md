@@ -3,7 +3,7 @@
 # Gateway Service
 
 
-
+tetw
 ## 1. Features
 - Gateway can **Routing** all api to microservices
 - Gateway can configure the **CORS** (Cross Origin Resource Server)
