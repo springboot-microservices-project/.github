@@ -15,7 +15,16 @@
 
 
 ## 1.1. Gateway login flow
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-get-token-flow.png?raw=false)
+
+
+
+## 1.1. Gateway verify token and authorization flow
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
+
+
+
+
 
 
 
