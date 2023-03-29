@@ -14,6 +14,11 @@
 - Gateway can save data token Authorization into redis, when login to auth-service is success
 
 
+## 1.1. Gateway login flow
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-flow.png?raw=false)
+
+
+
 
 
 ## 2. System Spec
