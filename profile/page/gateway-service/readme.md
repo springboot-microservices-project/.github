@@ -22,15 +22,7 @@
 
 ### 1.3 Features
 - handler mapping : pre routing 
-- web handler : 
-
-| Profile     | URL   | 
-|--------|-----|
-| Request Filter |  |
-| Rate Limmiter |  |
-| Circuit Breaker |  |
-
-
+- web handler : `Request Filter` `Rate Limmiter` `Circuit Breaker` 
 
 
 
