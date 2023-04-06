@@ -16,16 +16,16 @@
 ## 1.1. Flow of get Authorization Token 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-get-token-flow.png?raw=false)
 
-- **1)** client call the login api with valid (username & password) on request body
-- **2)** **api gateway** will routing to **auth-service** 
-- **3)** **auth-service** will check the username and password, is valid or not
-- **4)** **if user is valid** : auth service will save the JWT token to redis, and send the response to **api-gateway**
-- **4)** **if user is not valid** : **auth service** will send the response to **api-gateway**
--  **5)** **api gateway** willl send the response to the client
+- **1)** `client` call the `login api` with valid (username & password) on request body
+- **2)** `api gateway` will routing to `auth-service`
+- **3)** `auth-service` will check the username and password, is valid or not
+- **4)** `if user is valid` : auth service will save the JWT token to redis, and send the response to `api-gateway`
+- **4)** `if user is not valid` : `auth service` will send the response to `api-gateway`
+-  **5)** `api gateway` willl send the response to the client
 
 
 
-## 1.2. Flow of access an microservices for spesifiect apis include verify token filters
+## 1.2. Flow of client call api on every microservices, and api gateway will run Filters for verify token
 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
 
