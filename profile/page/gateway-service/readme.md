@@ -26,7 +26,7 @@
 
 
 
-## 1.2. Flow of api gateway will run Filters for verify token and then will forwarding to every microservices.
+## 1.2. Flow of verify token and routing to microservices
 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
 
