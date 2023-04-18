@@ -24,8 +24,6 @@
 -  **5)** `api gateway` willl send the response to the client
 
 
-
-
 ## 1.2. Flow of verify token and routing to microservices
 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
