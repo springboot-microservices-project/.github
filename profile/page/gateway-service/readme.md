@@ -5,7 +5,7 @@
 
 ## 1. Features
 - Gateway can **Routing** all api to microservices
-- Gateway can configure the **CORS** (Cross Origin Resource Server)
+- Gateway can configure the **CORS** (Cross Origin Resource Sharing)
 - Gateway can configure the **Ratelimmiter** and will saving data limit into redis
 - Gateway can configure the **Circuit Breaker** for spesifiect API and services
 - Gateway can configure the **Fallback** when circuit breaker is failed
@@ -13,7 +13,7 @@
 - Gateway can save data token Authorization into redis, when login to auth-service is success
 
 
-## 1.1. Flow of get Authorization Token 
+### 1.1. Flow of get Authorization Token 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-get-token-flow.png?raw=false)
 
 - **1)** `client` call the `login api` with valid (username & password) on request body
@@ -24,7 +24,7 @@
 -  **5)** `api gateway` willl send the response to the client
 
 
-## 1.2. Flow of verify token and routing to microservices
+### 1.2. Flow of verify token and routing to microservices
 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
 
@@ -40,7 +40,16 @@
 - **8)** `api gateway` will send the response body to `client`
 
 
+### 1.3. **CORS** (Cross Origin Resource Sharing) configuration on **Springcloud Gateway**
 
+### 1.4. **Rate Limmiter**
+#### 1.4. flow and process of **Rate Limmiter** on **Springcloud Gateway**
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-flow-of_ratelimmiter.png?raw=false)
+
+#### 1.4. **Rate Limmiter** configuration on **Springcloud Gateway**
+`
+config
+`
 
 
 
