@@ -76,8 +76,7 @@ public class RateLimmiterConfig {
         // for development only
         //return exchange -> Mono.just("1");
         return exchange ->
-                Mono.just(
-                        exchange.getRequest().getRemoteAddress().getHostName());
+              Mono.just(exchange.getRequest().getRemoteAddress().getHostName());
     }
 
 }
@@ -103,13 +102,13 @@ public class RateLimmiterConfig {
 - **4)** setup requestRateLimiter 
 ```
    public Function<GatewayFilterSpec, UriSpec> FILTER_ROUTE_GLOBAL(
-            String circuitBreakerName, String role) {
-            return f -> f.preserveHostHeader()
-                        .filter(this::filteRequestVerifyTokenAPI_ALL)
-                        .filter(this::filterRequestHeaderAcountKey)
-                        .filter(this::filterRequestHeaderApiKey)
-                        .requestRateLimiter().configure(c -> c.setRateLimiter(redisRateLimiter))
-                        .circuitBreaker(c -> c.setName(circuitBreakerName).setFallbackUri(GatewayFallbackController.FALLBACK_CIRCUITBREAKER));                        
+        String circuitBreakerName, String role) {
+        return f -> f.preserveHostHeader()
+                     .filter(this::filteRequestVerifyTokenAPI_ALL)
+                     .filter(this::filterRequestHeaderAcountKey)
+                     .filter(this::filterRequestHeaderApiKey)
+                     .requestRateLimiter().configure(c -> c.setRateLimiter(redisRateLimiter))
+                     .circuitBreaker(c -> c.setName(circuitBreakerName).setFallbackUri(GatewayFallbackController.FALLBACK_CIRCUITBREAKER));                        
             }            
 ```
 
