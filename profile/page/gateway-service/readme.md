@@ -2,11 +2,10 @@
 
 # Gateway Service
 
-
 ## 1. Features
-- Gateway can **Routing** all api to microservices
+- Gateway can [**Routing**](https://github.com/springboot-microservices-project/page/gateway-routing.md) all api to microservices
 - Gateway can configure the **CORS** (Cross Origin Resource Sharing)
-- Gateway can configure the **Ratelimmiter** and will saving data limit into redis
+- Gateway can configure the [**Ratelimmiter**](https://github.com/springboot-microservices-project/page/gateway-ratelimmiter.md) and will saving data limit into redis
 - Gateway can configure the **Circuit Breaker** for spesifiect API and services
 - Gateway can configure the **Fallback** when circuit breaker is failed
 - Gateway can modified the **request header** for access all microservices
@@ -14,7 +13,7 @@
 
 
 ### 1.1. Flow of get Authorization Token 
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-login-get-token-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-login-get-token-flow.png?raw=false)
 
 - **1)** `client` call the `login api` with valid (username & password) on request body
 - **2)** `api gateway` will routing to `auth-service`
@@ -26,7 +25,7 @@
 
 ### 1.2. Flow of verify token and routing to microservices
 
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-verify-token-and-authorize-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-verify-token-and-authorize-flow.png?raw=false)
 
 
 - **1)** `client` call API on `A service` or `B service` with valid (Authorization JWT) on request header
@@ -38,18 +37,6 @@
 - **6)** `microservices` will running the `filter decode key` for extract the information and validation, that all token is valid or not.
 - **7)** if all token is not valid `microservices` will block and send back to `api gateway` , if all token is valid `microservices` will send back to `microservice` with data what client needs
 - **8)** `api gateway` will send the response body to `client`
-
-
-### 1.3. **CORS** (Cross Origin Resource Sharing) configuration on **Springcloud Gateway**
-
-### 1.4. **Rate Limmiter**
-#### 1.4. flow and process of **Rate Limmiter** on **Springcloud Gateway**
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/gateway-flow-of_ratelimmiter.png?raw=false)
-
-#### 1.4. **Rate Limmiter** configuration on **Springcloud Gateway**
-`
-config
-`
 
 
 
