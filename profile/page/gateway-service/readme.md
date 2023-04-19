@@ -3,9 +3,9 @@
 # Gateway Service
 
 ## 1. Features
-- Gateway can [**Routing**](https://github.com/springboot-microservices-project/page/gateway-routing.md) all api to microservices
+- Gateway can [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) all api to microservices
 - Gateway can configure the **CORS** (Cross Origin Resource Sharing)
-- Gateway can configure the [**Ratelimmiter**](https://github.com/springboot-microservices-project/page/gateway-ratelimmiter.md) and will saving data limit into redis
+- Gateway can configure the [**Ratelimmiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and will saving data limit into redis
 - Gateway can configure the **Circuit Breaker** for spesifiect API and services
 - Gateway can configure the **Fallback** when circuit breaker is failed
 - Gateway can modified the **request header** for access all microservices
