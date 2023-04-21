@@ -146,6 +146,9 @@ public class ProductController extends BaseController {
     }
     
     
+    
+    //@CrossOrigin //*** DONT USE THIS ***
+    
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
     @RequestMapping(value = "/list", method = {RequestMethod.OPTIONS, RequestMethod.GET})
     public ResponseEntity<Response> getAll(
