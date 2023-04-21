@@ -19,7 +19,8 @@
 
 - **1)** application.yml
 ```
-  # custom properties : rate limiter
+# custom properties : rate limiter
+custom:  
   redis-rate-limiter:
     replenishRate: 1
     burstCapacity: 3
