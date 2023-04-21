@@ -11,10 +11,11 @@
 - application.yml
 ```
 
-  # rules of enable CORS in Springboot microservices architecture:
-  # - on api gateway-service, implement global cors for accepting the url : front end
-  # - on every microservices, implement global cors for accepting the url : api-gateway-service
-  # - on every microservices, dont use @CorsOrigin on every endpoint, because that annotation will generate duplicate key on http response header, thats will make the browser cannot accept the http response
+# rules of enable CORS in Springboot microservices architecture:
+# - on api gateway-service, implement global cors for accepting the url : front end
+# - on every microservices, implement global cors for accepting the url : api-gateway-service
+# - on every microservices, dont use @CorsOrigin on every endpoint, because that annotation will generate duplicate key on http response header, thats will make the browser cannot accept the http response
+spring:  
   cloud:
     gateway:
       globalcors:
