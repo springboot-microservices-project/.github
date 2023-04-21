@@ -14,7 +14,7 @@ My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsof
 This is an backend server with Microservice architecture made using Springboot and frontend made using react. all services will run on docker containers, for simplify develop, deploy and testing
 
 ### 1.1. Overviews
-- Implement **Microservices Architectures** on Springboot Projects as a backend services
+- Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
 - Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
 - Implement **CORS** (Control-Origin Resource Server), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
