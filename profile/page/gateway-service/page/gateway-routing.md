@@ -1,5 +1,5 @@
 [Home](https://github.com/springboot-microservices-project/) /
-[Gateway](https://github.com/springboot-microservices-project/.github/edit/main/profile/page/gateway-service/readme.md)
+[Gateway](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md)
 
 # Routing
 
