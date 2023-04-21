@@ -3,7 +3,7 @@
 # Gateway Service
 
 ## 1. Features
-- Gateway can manage [**Authorization Token**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-gateway-authorizationtoken.md) 
+- Gateway can manage [**Authorization Token**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-authorizationtoken.md) 
 - Gateway can [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) all api to microservices
 - Gateway can configure the [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) (Cross Origin Resource Sharing)
 - Gateway can configure the [**Ratelimmiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and will saving data limit into redis
