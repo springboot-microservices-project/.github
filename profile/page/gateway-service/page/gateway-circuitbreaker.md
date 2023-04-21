@@ -8,14 +8,14 @@
 
 
 ### 1.2. Circuit Breaker configuration on SpringCloud Gateway
-- application.yml
+- **1)** application.yml
 ```
 # custom properties : circuit breaker
 custom:
   circuit-breaker:
     timeoutduration: 3
 ```
-- CircuitBreakerConfig.java
+- **2)** CircuitBreakerConfig.java
 
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.circuitbreaker;
@@ -57,5 +57,36 @@ public class CircuitBreakerConfig {
 }
 
 ```
+
+
+- **3)** setup CircuitBreaker on RouteLocator
+```
+@Bean
+    public RouteLocator myRoutes(RouteLocatorBuilder routeLocatorBuilder) {
+        BaseFilterRoutes baseFilterRoutes = new BaseFilterRoutes(redisRepo, restTemplate, authServiceUri, rateLimmiterConfig.redisRateLimiter());
+        return routeLocatorBuilder.routes()
+        
+        // Master Service
+        .route(p -> p.path("/api/master/**")
+             .filters(baseFilterRoutes.FILTER_ROUTE_GLOBAL(CB_MASTER_SERVICES, ROLE_ALL))
+             .uri(masterServiceUri))
+         .build();
+```
+
+
+- **4)** setup circuitBreaker on filters 
+```
+   public Function<GatewayFilterSpec, UriSpec> FILTER_ROUTE_GLOBAL(
+        String circuitBreakerName, String role) {
+        return f -> f.preserveHostHeader()
+                     .filter(this::filteRequestVerifyTokenAPI_ALL)
+                     .filter(this::filterRequestHeaderAcountKey)
+                     .filter(this::filterRequestHeaderApiKey)
+                     .requestRateLimiter().configure(c -> c.setRateLimiter(redisRateLimiter))
+                     .circuitBreaker(c -> c.setName(circuitBreakerName).setFallbackUri(GatewayFallbackController.FALLBACK_CIRCUITBREAKER));                        
+            }            
+```
+
+
 
 
