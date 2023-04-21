@@ -3,7 +3,7 @@
 
 # Circuit Breaker
 
-### 1.1. Flow of Circuit Breaker on SpringCloud Gateway
+### 1.1. Sequence of Circuit Breaker on SpringCloud Gateway
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-circuitbreaker-squence.png?raw=true)
 
 
