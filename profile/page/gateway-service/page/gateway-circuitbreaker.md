@@ -8,7 +8,12 @@
 
 
 ### 1.2. Circuit Breaker configuration on SpringCloud Gateway
-
+```
+# custom properties : circuit breaker
+custom:
+  circuit-breaker:
+    timeoutduration: 3
+```
 
 
 
