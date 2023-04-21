@@ -5,13 +5,13 @@
 ## 1. Features
 - Gateway can manage [**Authorization Token**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) 
 - Gateway can [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) all api to microservices
-- Gateway can configure the **CORS** (Cross Origin Resource Sharing)
+- Gateway can configure the [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) (Cross Origin Resource Sharing)
 - Gateway can configure the [**Ratelimmiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and will saving data limit into redis
-- Gateway can configure the **Circuit Breaker** for spesifiect API and services
-- Gateway can configure the **Fallback** when circuit breaker is failed
-- Gateway can modified the **request header** for access all microservices
+- Gateway can configure the [**Circuit Breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md) for spesifiect API and services
+- Gateway can configure the [**Circuit Breaker Fallback**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker-fallback.md) when circuit breaker is failed
+- Gateway can modified the [**request header**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-modified-reqheader.md) for access all microservices
 
-
+](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker-fallback.md
 
 ### 1.1. Flow of get Authorization Token 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-login-get-token-flow.png?raw=false)
