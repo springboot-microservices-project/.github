@@ -1,8 +1,7 @@
 [Home](https://github.com/springboot-microservices-project/) /
 [Gateway](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md)
 
-# Gateway Service
-
+# CORS (Cross-origin Resource Sharing)
 
 ## 1. Features
 - Gateway can **Routing** all api to microservices
