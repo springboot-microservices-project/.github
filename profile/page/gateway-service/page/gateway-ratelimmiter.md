@@ -6,12 +6,9 @@
 ## 1.1. Flow of Ratelimmiter
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-flow.png?raw=false)
 
-- **1)** `client` call the `login api` with valid (username & password) on request body
-- **2)** `api gateway` will routing to `auth-service`
-- **3)** `auth-service` will check the username and password, is valid or not
-- **4)** `if user is valid` : auth service will save the JWT token to redis, and send the response to `api-gateway`
-- **4)** `if user is not valid` : `auth service` will send the response to `api-gateway`
-- **5)** `api gateway` willl send the response to the client
+- gateway detecting five request in 1 second
+- gateway just accepting 3 request, 
+- gateway block 2 request, because we already set just allowing 3 request in one second
 
 
 ## 1.2. Rate Limmiter Configuration on SpringCloud Gateway
