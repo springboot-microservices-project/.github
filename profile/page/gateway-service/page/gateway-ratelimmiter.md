@@ -4,7 +4,7 @@
 # Rate Limmiter
 
 ## 1.1. Flow of Ratelimmiter
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-flow.png?raw=true)
 
 - gateway detecting five request in 1 second
 - gateway just accepting 3 request, 
@@ -12,7 +12,7 @@
 
 
 ## 1.2. Sequence of Ratelimmiter
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-squence.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-squence.png?raw=true)
 
 
 ## 1.3. Rate Limmiter Configuration on SpringCloud Gateway
