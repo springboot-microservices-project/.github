@@ -8,6 +8,7 @@
 
 
 ### 1.2. Circuit Breaker configuration on SpringCloud Gateway
+- application.yml
 ```
 # custom properties : circuit breaker
 custom:
