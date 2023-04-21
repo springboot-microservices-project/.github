@@ -123,9 +123,9 @@ public class MainApp {
 
 ```
 
-### 1.4. on every microservices, dont use @CorsOrigin on every endpoint, because that annotation will generate duplicate key on http response header, thats will make the browser cannot accept the http response
+### 1.4. on every microservices, dont use @CorsOrigin 
 
-- every controllers
+on every microservices, dont use @CorsOrigin on every endpoint, because that annotation will generate duplicate key on http response header, thats will make the browser cannot accept the http response
 ```
 @RestController
 @RequestMapping(BaseController.basePrefixApi + "/product")
