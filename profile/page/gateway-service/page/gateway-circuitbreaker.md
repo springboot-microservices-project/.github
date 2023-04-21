@@ -15,7 +15,7 @@ custom:
   circuit-breaker:
     timeoutduration: 3
 ```
-- **2)** CircuitBreakerConfig.java
+- **2)** create CircuitBreakerConfig.java
 
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.circuitbreaker;
