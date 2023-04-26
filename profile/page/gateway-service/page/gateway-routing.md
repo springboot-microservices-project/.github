@@ -36,6 +36,12 @@ custom:
 @Configuration
 public class GatewayPredicatesRoutingConfig {
 
+ @Value("${custom.master-service.uri}")
+ String masterServiceUri;
+
+ @Value("${custom.transaction-service.uri}")
+ String transactionServiceUri;
+
  @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder routeLocatorBuilder) {
         BaseFilterRoutes baseFilterRoutes = new BaseFilterRoutes(redisRepo, restTemplate, authServiceUri, rateLimmiterConfig.redisRateLimiter());
