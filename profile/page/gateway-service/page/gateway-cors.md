@@ -4,7 +4,7 @@
 # CORS (Cross-origin Resource Sharing)
 
 ### 1.1. Flow of CORS on SpringCloud Gateway
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-cors-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-cors-flow.png?raw=true)
 
 
 ### 1.2. CORS configuration on SpringCloud Gateway
