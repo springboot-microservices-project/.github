@@ -1,7 +1,7 @@
 [Home](https://github.com/springboot-microservices-project/) /
 [Gateway](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md)
 
-# Authorization Token
+# Authorization & Verify Token
 
 ### 1.1. Flow of get Authorization Token 
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-login-get-token-flow.png?raw=false)
