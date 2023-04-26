@@ -34,7 +34,7 @@ This is an backend server with Microservice architecture made using Springboot a
 - Implement **resilence4j** on gawateway service, for handling ratelimiter and circuit breaker on every end point
 - Implement **Monitoring API** using **Prometheus and Grafana**
 - Implementat a **Dockerfile** to all services for creating the docker images 
-- Implement push docker image to **dockerhub** [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/repositories/denitiawan)
+- Implement push docker image to **dockerhub** [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/search?q=denitiawan)
 - Implement **docker-compose** for configure, setup and running the all services
 - Implement **database migration** on every microservices using **liquibase**
 
