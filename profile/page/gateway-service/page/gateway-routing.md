@@ -3,7 +3,7 @@
 
 # Routing
 
-### 1.1. Flow of Routing APIs to microservies on SpringCloud Gateway
+### 1.1. Flow of Routing APIs to microservices on SpringCloud Gateway
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-routing-architecture.png?raw=true)
 
 
@@ -36,11 +36,20 @@ custom:
 @Configuration
 public class GatewayPredicatesRoutingConfig {
 
+ ....
+ ....
+ ....
+
  @Value("${custom.master-service.uri}")
  String masterServiceUri;
 
  @Value("${custom.transaction-service.uri}")
  String transactionServiceUri;
+
+ ....
+ ....
+ ....
+
 
  @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder routeLocatorBuilder) {
