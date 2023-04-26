@@ -61,12 +61,12 @@ public class GatewayPredicatesRoutingConfig {
         ....
         
          // Master Service
-                .route(p -> p.path("/api/master/**")
+         .route(p -> p.path("/api/master/**")
                         .filters(baseFilterRoutes.FILTER_ROUTE_GLOBAL(CB_MASTER_SERVICES, ROLE_ALL))
                         .uri(masterServiceUri))
         
         // Transaction Service
-                .route(p -> p.path("/api/transaction/**")
+        .route(p -> p.path("/api/transaction/**")
                         .filters(baseFilterRoutes.FILTER_ROUTE_GLOBAL(CB_TRANSACTION_SERVICES, ROLE_ALL))
                         .uri(transactionServiceUri))
                         
