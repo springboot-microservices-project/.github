@@ -17,18 +17,105 @@
 
 ## 1.3. Rate Limmiter Configuration on SpringCloud Gateway
 
-
-- **1)** application.yml
+- **1)** pom.xml
 ```
+
+        <!--  spring cloud gateway : rate limmiter-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!--  spring cloud gateway : save rate limmiter into redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        </dependency>
+
+```
+
+
+- **2)** application.yml
+```
+# redis
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password: password123
+    database: 0
+    timeout: 10
+
 # custom properties : rate limiter
 custom:  
   redis-rate-limiter:
     replenishRate: 1
     burstCapacity: 3
 ```
+- **3)** create redis configuration file **RedisConfig.java**
+```
+package com.deni.microservices.gateway.adapter.redis.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
+import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.data.redis.serializer.GenericToStringSerializer;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+@Configuration
+@EnableCaching
+@EnableRedisRepositories
+public class RedisConfig {
+
+    @Value("${spring.redis.host}")
+    private String redisHostname;
+
+    @Value("${spring.redis.port}")
+    private int redisPort;
+
+    @Value("${spring.redis.password}")
+    private String redisPassword;
 
 
-- **2)** create ratelimmiter configuration on RateLimmiterConfig file
+    @Bean
+    public RedisTemplate<String, String> redisTemplate() {
+
+        // redis template
+        RedisTemplate<String, String> redisTemplate = new RedisTemplate<String, String>();
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashKeySerializer(new GenericToStringSerializer<String>(String.class));
+        redisTemplate.setHashKeySerializer(new JdkSerializationRedisSerializer());
+        redisTemplate.setValueSerializer(new JdkSerializationRedisSerializer());
+
+        // redis config (host, port, password)
+        RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration(redisHostname, redisPort);
+        redisConfig.setPassword(redisPassword);
+
+        // redis template
+        JedisClientConfiguration jedisClientConfig = JedisClientConfiguration.builder().build();
+
+        // redis connection
+        JedisConnectionFactory redisConnection = new JedisConnectionFactory(redisConfig, jedisClientConfig);
+        redisConnection.afterPropertiesSet();
+
+        redisTemplate.setConnectionFactory(redisConnection);
+
+        return redisTemplate;
+    }
+
+}
+
+```
+
+- **4)** create ratelimmiter configuration file **RateLimmiterConfig.java**
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.ratelimiter;
 
@@ -87,7 +174,7 @@ public class RateLimmiterConfig {
 ```
 
 
-- **3)** setup routing on RouteLocator
+- **5)** setup routing on RouteLocator
 ```
 @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder routeLocatorBuilder) {
@@ -102,7 +189,7 @@ public class RateLimmiterConfig {
 ```
 
 
-- **4)** setup requestRateLimiter 
+- **6)** setup requestRateLimiter 
 ```
    public Function<GatewayFilterSpec, UriSpec> FILTER_ROUTE_GLOBAL(
         String circuitBreakerName, String role) {
