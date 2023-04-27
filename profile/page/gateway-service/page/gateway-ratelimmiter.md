@@ -11,11 +11,14 @@
 - gateway block 2 request, because we already set just allowing 3 request in one second
 
 
-## 1.2. Sequence of Ratelimmiter
+## 1.2. Sequence of Ratelimmiter (client - gateway - redis)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-sequence-redis.png?raw=true)
+
+## 1.2. Sequence of Ratelimmiter (client - gateway - microservices)
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-squence.png?raw=true)
 
 
-## 1.3. Rate Limmiter Configuration on SpringCloud Gateway
+## 1.4. Rate Limmiter Configuration on SpringCloud Gateway
 
 - **1)** pom.xml
 ```
