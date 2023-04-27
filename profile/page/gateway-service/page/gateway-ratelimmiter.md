@@ -13,7 +13,36 @@
 
 ## 1.2. Sequence of Ratelimmiter (client - gateway - redis)
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-sequence-redis.png?raw=true)
+- plan uml
+```
+@startuml
+' component
+actor       client as client
+participant gateway as gateway
+database    redis    as redis
 
+
+' flow
+client -> gateway : request 1
+gateway -> redis : request_rate_limmiter_tokens:2
+gateway -> client : 200 OK
+
+client -> gateway : request 2
+gateway -> redis : request_rate_limmiter_tokens:1
+gateway -> client : 200 OK
+
+client -> gateway : request 3
+gateway -> redis : request_rate_limmiter_tokens:0
+gateway -> client : 200 OK
+
+client -> gateway : request 4
+gateway -> client : 429 Too Many Request
+
+client -> gateway : request 5
+gateway -> client : 429 Too Many Request
+
+@enduml
+```
 ## 1.2. Sequence of Ratelimmiter (client - gateway - microservices)
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-ratelimmiter-squence.png?raw=true)
 
