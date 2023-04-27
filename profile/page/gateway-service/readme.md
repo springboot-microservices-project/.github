@@ -3,7 +3,6 @@
 # Gateway Service
 
 ## 1. Features
-
 - [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) 
 - [**Filters**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-filters.md) 
 - [**Modify request header**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-modified-reqheader.md)
@@ -11,9 +10,9 @@
 - [**Ratelimmiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md)
 - [**Circuit Breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md)
 - [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
-- [**Spring Actuator**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
-- [**Prometheus**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
-- [**Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
+- [**Spring Actuator**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator.md) 
+- [**Prometheus**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-prometheus.md) 
+- [**Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-grafana.md) 
 
 
 ## 2. System Spec
