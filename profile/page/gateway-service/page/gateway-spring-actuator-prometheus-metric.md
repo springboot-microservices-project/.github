@@ -6,11 +6,48 @@
 ### 1.1. Flow of Spring Actuator & Prometheus Metric on SpringCloud Gateway
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-grafana-flow.png?raw=false)
 
-### 1.2. Prometheus Metric
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-metric.png?raw=true)
+### 1.2. List of metric APIs
+```
+{
+    "_links": {
+        "self": {
+            "href": "http://localhost:8181/actuator",
+            "templated": false
+        },
+        "prometheus": {
+            "href": "http://localhost:8181/actuator/prometheus",
+            "templated": false
+        },
+        "beans": {
+            "href": "http://localhost:8181/actuator/beans",
+            "templated": false
+        },
+        "health": {
+            "href": "http://localhost:8181/actuator/health",
+            "templated": false
+        },
+        "health-path": {
+            "href": "http://localhost:8181/actuator/health/{*path}",
+            "templated": true
+        },
+        "info": {
+            "href": "http://localhost:8181/actuator/info",
+            "templated": false
+        },
+        "metrics-requiredMetricName": {
+            "href": "http://localhost:8181/actuator/metrics/{requiredMetricName}",
+            "templated": true
+        },
+        "metrics": {
+            "href": "http://localhost:8181/actuator/metrics",
+            "templated": false
+        }
+    }
+}
+```
 
-### 1.3. Prometheus Server
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-prometheus.png?raw=true)
+### 1.2. Example value of prometheus Metric
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-metric.png?raw=true)
 
 ### 1.4. Configuration 
 - **pom.xml**
