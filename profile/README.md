@@ -20,7 +20,7 @@ This is an backend server with Microservice architecture made using Springboot a
 - Implement **Logging** using **logback**
 - Implement [**spring actuator**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus.md) on gateway service, for monitoring and tracking every endpoint using metric 
 - Implement **resilence4j** on gawateway service, for handling [**ratelimiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and [**circuit breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md) on every end point
-- Implement **Monitoring API** using **Prometheus and Grafana**
+- Implement **Monitoring API** using [**Prometheus and Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-prometheus-grafana-monitoring.md)
 - Implementat a **Dockerfile** to all services for creating the docker images 
 - Implement push docker image to **dockerhub** [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/search?q=denitiawan)
 - Implement **docker-compose** for configure, setup and running the all services
