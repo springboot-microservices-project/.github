@@ -10,8 +10,8 @@
 - [**Ratelimmiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md)
 - [**Circuit Breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md)
 - [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
-- [**Spring Actuator & Prometheus Metric**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus.md) 
-- [**Prometheus & Grafana Monitoring**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-grafana.md) 
+- [**Spring Actuator & Prometheus Metric**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus-metric.md) 
+- [**Prometheus & Grafana Monitoring**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-prometheus-grafana-monitoring.md) 
 
 
 ## 2. System Spec
