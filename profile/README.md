@@ -1,19 +1,7 @@
-# Welcome 
-
-My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsoft.co.id/ from Indonesia.
-**Loves writing and coding enthusiast** who always **keeps learning** about software engineering skills for make me **keep an update and strenghts skills** 🚀
-
-
-### About Me
-| Profile     | URL                                                          | 
-|------------------|--------------|
-| Github | https://github.com/denitiawan |
-| Medium | https://deni-setiawan.medium.com/ |
-
-# 1. what is 'Springboot Microservices Project'
+# 1. what is 'Springboot Microservices Project'?
 This is an backend server with Microservice architecture made using Springboot and frontend made using react. all services will run on docker containers, for simplify develop, deploy and testing
 
-### 1.1. Overviews
+### 1.1. Already implements
 - Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
 - Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
@@ -162,5 +150,13 @@ This is an backend server with Microservice architecture made using Springboot a
 
 
 
+# About Me
 
+My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsoft.co.id/ from Indonesia.
+**Loves writing and coding enthusiast** who always **keeps learning** about software engineering skills for make me **keep an update and strenghts skills** 🚀
+
+| Profile     | URL                                                          | 
+|------------------|--------------|
+| Github | https://github.com/denitiawan |
+| Medium | https://deni-setiawan.medium.com/ |
 
