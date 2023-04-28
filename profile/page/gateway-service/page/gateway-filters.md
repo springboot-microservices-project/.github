@@ -31,7 +31,7 @@ custom:
     uri: http://localhost:8989
 ```
 
-- GatewayPredicatesRoutingConfig.java
+- **GatewayPredicatesRoutingConfig.java**
 ```
 @Configuration
 public class GatewayPredicatesRoutingConfig {
