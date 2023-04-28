@@ -1,23 +1,11 @@
-# Welcome 
-
-My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsoft.co.id/ from Indonesia.
-**Loves writing and coding enthusiast** who always **keeps learning** about software engineering skills for make me **keep an update and strenghts skills** 🚀
-
-
-### About Me
-| Profile     | URL                                                          | 
-|------------------|--------------|
-| Github | https://github.com/denitiawan |
-| Medium | https://deni-setiawan.medium.com/ |
-
-# 1. what is 'Springboot Microservices Project'
+# 1. what is 'Springboot Microservices Project'?
 This is an backend server with Microservice architecture made using Springboot and frontend made using react. all services will run on docker containers, for simplify develop, deploy and testing
 
-### 1.1. Overviews
+### 1.1. Already implements
 - Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
 - Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
-- Implement **CORS** (Control-Origin Resource Server), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
+- Implement [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) (Control-Origin Resource Sharing), used for control and allowing the **domain, http method, http header, etc** for access the API on backend 
 - Implement  [**Auth services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md)  with basic authentication, for handling the authentication & authorization, for all microservices
 - Implement **Redis** for memory cache and saving the authentication token
 - Implement [**Master Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/master-service/readme.md) for handling all master datas
@@ -26,12 +14,12 @@ This is an backend server with Microservice architecture made using Springboot a
 - Implement [**schmaster service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schmaster-service/readme.md) for handling search data master using elasticsearch
 - Implement [**schtransaction service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schtransaction-service/readme.md) for handling search data transaction using elasticsearch
 - Implement **CQRS** (Command Query Responsibile Segregation), used for split (insert, update, delete) to SQL and (select) to NoSQL
-- Implement **Message broker** using RabbitMQ for Async task used when microservices will sending data and receive data
+- Implement **Message broker** using RabbitMQ for Asyncronous task used when all microservices will communicate with publish-consume message
 - Implement [**Email Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/email-service/readme.md) for handling email sending, data will receive from rabbitMQ
 - Implement [**Report Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/report-service/readme.md) for handling report Generator, data will receive from rabbitMQ
 - Implement **Logging** using **logback**
-- Implement **spring actuator** on gateway service, for monitoring and tracking every endpoint using metric 
-- Implement **resilence4j** on gawateway service, for handling ratelimiter and circuit breaker on every end point
+- Implement [**spring actuator**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus.md) on gateway service, for monitoring and tracking every endpoint using metric 
+- Implement **resilence4j** on gawateway service, for handling [**ratelimiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and [**circuit breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md) on every end point
 - Implement **Monitoring API** using **Prometheus and Grafana**
 - Implementat a **Dockerfile** to all services for creating the docker images 
 - Implement push docker image to **dockerhub** [https://hub.docker.com/repositories/denitiawan](https://hub.docker.com/search?q=denitiawan)
@@ -162,5 +150,13 @@ This is an backend server with Microservice architecture made using Springboot a
 
 
 
+# About Me
 
+My Name is **Deni Setiawan**, I am **Backend & System Analyst** at http://nexsoft.co.id/ from Indonesia.
+**Loves writing and coding enthusiast** who always **keeps learning** about software engineering skills for make me **keep an update and strenghts skills** 🚀
+
+| Profile     | URL                                                          | 
+|------------------|--------------|
+| Github | https://github.com/denitiawan |
+| Medium | https://deni-setiawan.medium.com/ |
 
