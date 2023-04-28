@@ -8,7 +8,7 @@
 
 
 ### 1.2. Filters configuration on SpringCloud Gateway
-- application.yml
+- **application.yml**
 
 ```
   # routing server uri
@@ -68,7 +68,7 @@ String masterServiceUri;
 }
 ```
 
-- BaseFilterRoutes.java
+- **BaseFilterRoutes.java**
 ```
 public class BaseFilterRoutes {
 
@@ -99,7 +99,7 @@ public class BaseFilterRoutes {
 }
 ```
 
-- FilteRequestVerifyTokenAPI.java
+- **FilteRequestVerifyTokenAPI.java**
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.requestfilter;
 
@@ -251,7 +251,7 @@ public class FilteRequestVerifyTokenAPI {
 
 ```
 
-- FilterRequestHeaderAccountKey.java
+- **FilterRequestHeaderAccountKey.java**
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.requestfilter;
 
@@ -286,7 +286,7 @@ public class FilterRequestHeaderAccountKey {
 
 ```
 
-- FilterRequestHeaderApiKey.java
+- **FilterRequestHeaderApiKey.java**
 ```
 package com.deni.microservices.gateway.gateway.webhandler.prefilter.requestfilter;
 
