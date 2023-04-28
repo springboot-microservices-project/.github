@@ -1,9 +1,9 @@
 [Home](https://github.com/springboot-microservices-project/) /
 [Gateway](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md)
 
-# Spring actuator and Prometheus
+# Spring actuator and Prometheus Metric
 
-### 1.1. Flow of Spring Actuator & Prometheus on SpringCloud Gateway
+### 1.1. Flow of Spring Actuator & Prometheus Metric on SpringCloud Gateway
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-grafana-flow.png?raw=false)
 
 ### 1.2. Prometheus Metric
