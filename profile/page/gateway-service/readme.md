@@ -11,7 +11,7 @@
 - [**Circuit Breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md)
 - [**CORS**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-cors.md) 
 - [**Metric Spring Actuator & Prometheus**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus.md) 
-- [**Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-grafana.md) 
+- [**prometheus & Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-grafana.md) 
 
 
 ## 2. System Spec
