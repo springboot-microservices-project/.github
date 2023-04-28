@@ -1,13 +1,19 @@
 [Home](https://github.com/springboot-microservices-project/) /
 [Gateway](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md)
 
-# Metric Spring actuator and Prometheus
+# Spring actuator and Prometheus
 
-### 1.1. Spring Actuator & Prometheus on SpringCloud Gateway
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gateway-springactuator-prometheus.png?raw=false)
+### 1.1. Flow of Spring Actuator & Prometheus on SpringCloud Gateway
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-grafana-flow.png?raw=false)
 
-### 1.2. Spring Actuator & Prometheus configuration on SpringCloud Gateway
-- pom.xml
+### 1.2. Metric
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-metric.png?raw=true)
+
+### 1.3. Prometheus Server
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-prometheus.png?raw=true)
+
+### 1.4. Configuration 
+- **pom.xml**
 ```
   <!-- spring actuator metric point-->
         <dependency>
@@ -23,7 +29,7 @@
         </dependency>
 ```
 
-- application.yml
+- **application.yml**
 ```
 # promotheus
 # spring actuator config, for show all metric api
