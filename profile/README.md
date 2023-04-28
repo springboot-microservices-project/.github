@@ -14,7 +14,7 @@ This is an backend server with Microservice architecture made using Springboot a
 - Implement [**schmaster service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schmaster-service/readme.md) for handling search data master using elasticsearch
 - Implement [**schtransaction service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schtransaction-service/readme.md) for handling search data transaction using elasticsearch
 - Implement **CQRS** (Command Query Responsibile Segregation), used for split (insert, update, delete) to SQL and (select) to NoSQL
-- Implement **Message broker** using RabbitMQ for Async task used when microservices will sending data and receive data
+- Implement **Message broker** using RabbitMQ for Asyncronous task used when all microservices will communicate with publish-consume message
 - Implement [**Email Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/email-service/readme.md) for handling email sending, data will receive from rabbitMQ
 - Implement [**Report Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/report-service/readme.md) for handling report Generator, data will receive from rabbitMQ
 - Implement **Logging** using **logback**
