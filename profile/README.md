@@ -18,7 +18,7 @@ This is an backend server with Microservice architecture made using Springboot a
 - Implement [**Email Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/email-service/readme.md) for handling email sending, data will receive from rabbitMQ
 - Implement [**Report Service**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/report-service/readme.md) for handling report Generator, data will receive from rabbitMQ
 - Implement **Logging** using **logback**
-- Implement **spring actuator** on gateway service, for monitoring and tracking every endpoint using metric 
+- Implement [**spring actuator**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus.md) on gateway service, for monitoring and tracking every endpoint using metric 
 - Implement **resilence4j** on gawateway service, for handling ratelimiter and circuit breaker on every end point
 - Implement **Monitoring API** using **Prometheus and Grafana**
 - Implementat a **Dockerfile** to all services for creating the docker images 
