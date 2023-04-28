@@ -6,7 +6,7 @@
 ### 1.1. Flow of Spring Actuator & Prometheus on SpringCloud Gateway
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-grafana-flow.png?raw=false)
 
-### 1.2. Metric
+### 1.2. Prometheus Metric
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-metric.png?raw=true)
 
 ### 1.3. Prometheus Server
