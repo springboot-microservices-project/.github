@@ -4,7 +4,7 @@
 # Spring actuator and Prometheus Metric
 
 ### 1.1. Flow of Spring Actuator & Prometheus Metric on SpringCloud Gateway
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-grafana-flow.png?raw=false)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/gw-actuator-prometheus-metric.png?raw=false)
 
 ### 1.2. List of metric APIs
 ```
