@@ -9,7 +9,7 @@
 
 ### 1.2. Routing configuration on SpringCloud Gateway
 
-- application.yml
+- add config on file **application.yml**
 ```
 # routing server uri
 custom:
@@ -31,7 +31,7 @@ custom:
     uri: http://localhost:8989  
 ```
 
-- GatewayPredicatesRoutingConfig
+- create file **GatewayPredicatesRoutingConfig.java**
 ```
 @Configuration
 public class GatewayPredicatesRoutingConfig {
