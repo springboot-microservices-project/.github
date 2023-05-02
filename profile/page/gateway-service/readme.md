@@ -2,7 +2,10 @@
 
 # Gateway Service
 
-## 1. Features
+## Spring Cloud Gateway
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/springcloud-gateway-architecture.png?raw=true)
+
+## Already Implemented
 - [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) 
 - [**Filters**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-filters.md) 
 - [**Modify request header**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-modified-reqheader.md)
@@ -14,9 +17,7 @@
 - [**Prometheus & Grafana Monitoring**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-prometheus-grafana-monitoring.md) 
 
 
-## 2. System Spec
-
-### 2.1 Tech Spec
+## Tech Spec
 | Name  |
 |----|
 | Springboot 2.7^  |
@@ -25,7 +26,7 @@
 |  |
 
 
-### 2.2 Librarries
+### Librarries
 
 | Name  | Version | 
 |----|----|
