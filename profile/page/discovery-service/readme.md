@@ -2,24 +2,35 @@
 
 # Discovery Service
 
-## 1. Features
-- a
-- b
-- c
+- [Design](#design)
+- [Tech Spesification](#tech-specification)
+- [Pom.xml](#pomxml)
+- [Application.yml](#applicationyml)
+
+## Design
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/discovery-service-up.png?raw=true)
 
 
-## 2. System Spec
-
-### 2.1 Tech Spec
+## Tech Specification
 | Name  |
 |----|
 | Springboot 2.7^  |
 | Java 11 |
-|  |
+| liquibase|
+| eureka-client|
+| rabbit-mq|
+| mysql|
+| spring-jpa|
 
 
-### 2.2 Librarries
 
-| Name  | Version | 
-|----|----|
-| | |
+## Pom.xml
+```
+ 
+```
+
+## Application.yml
+```
+
+```
+
