@@ -2,11 +2,8 @@
 
 # Auth Service
 
-## 1. Features
-- a
-- b
-- c
-
+## 1. Design
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/auth-service-architecture.jpg?raw=true)
 
 ## 2. System Spec
 
