@@ -376,3 +376,285 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 }
 
 ```
+
+### 2.6 JWTAuthenticationFilter
+```
+package com.deni.microservices.auth.security.filter;
+
+import com.auth0.jwt.JWT;
+import com.deni.microservices.auth.adapter.redis.repo.RedisRepo;
+import com.deni.microservices.auth.common.controller.Response;
+import com.deni.microservices.auth.security.config.UserPrincipal;
+import com.deni.microservices.auth.module.auth.dto.LoginDTO;
+import com.deni.microservices.auth.module.auth.dto.Token;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+
+import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
+
+public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+    Logger log = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
+
+    RedisRepo redisRepo;
+
+    private AuthenticationManager authenticationManager;
+
+    public JwtAuthenticationFilter(AuthenticationManager authenticationManager,RedisRepo redisRepository) {
+        this.authenticationManager = authenticationManager;
+        this.redisRepo = redisRepository;
+    }
+
+
+    // @PostMapping(value = "localhost:8080/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    // @ReqBody {"username":"den", "password":"den123"}
+    @RequestMapping( method = {RequestMethod.OPTIONS, RequestMethod.POST})
+    @Override
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
+        log.debug("Request login {}", "login & authentication filter");
+
+        // Grab credentials and map them to login viewmodel
+        LoginDTO credentials = null;
+        try {
+            credentials = new ObjectMapper().readValue(request.getInputStream(), LoginDTO.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Create login token
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
+                credentials.getUsername(),
+                credentials.getPassword(),
+                new ArrayList<>());
+
+        // Authenticate user
+        Authentication auth = null;
+        try {
+            auth = authenticationManager.authenticate(authenticationToken);
+        } catch (Exception e) {
+            unsuccessfulLogin(request, response);
+        }
+
+
+        return auth;
+    }
+
+    // login success and then generating token using JWT
+    // format token : X-AUTH-TOKEN.xxxx.yyyyy
+    @Override
+    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
+        // Grab principal
+        UserPrincipal principal = (UserPrincipal) authResult.getPrincipal();
+
+        // Create JWT Token
+        String token = JWT.create()
+                .withSubject(principal.getUsername())
+                .withExpiresAt(new Date(System.currentTimeMillis() + JwtProperties.TOKEN_EXPIRED_TIME))
+                .sign(HMAC512(JwtProperties.TOKEN_SECRET.getBytes()));
+
+        String finalToken = JwtProperties.TOKEN_PREFIX + token;
+        // Add token in response header
+        response.addHeader(JwtProperties.TOKEN_X_KEY, finalToken);
+
+        // add token in response cookie
+        Cookie cookie = new Cookie(JwtProperties.TOKEN_X_KEY, finalToken);
+        response.addCookie(cookie);
+
+
+        // save token to redis
+        redisRepo.saveOrUpdate(finalToken, finalToken);
+
+
+
+        // add body
+        Response statusResponse = Response.builder()
+                .status(HttpStatus.OK.toString())
+                .message("Login Success")
+                .data(new Token(JwtProperties.TOKEN_X_KEY, finalToken))
+                .build();
+        Object body = new ResponseEntity<>(statusResponse, HttpStatus.OK);
+
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json");
+
+
+        response.setStatus(HttpServletResponse.SC_OK);
+        response.getWriter().write(new Gson().toJson(body));
+        response.getWriter().flush();
+
+        log.debug("Response Login {}", HttpStatus.OK);
+    }
+
+
+    protected void unsuccessfulLogin(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            // add body
+            Response statusResponse = Response.builder()
+                    .status(HttpStatus.FORBIDDEN.toString())
+                    .message("Login Failed")
+                    .data("Username & Password is not Match")
+                    .build();
+            Object body = new ResponseEntity<>(statusResponse, HttpStatus.FORBIDDEN);
+            response.setContentType("application/json");
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            response.getWriter().write(new Gson().toJson(body));
+            response.getWriter().flush();
+
+            log.debug("Response Login {}", HttpStatus.FORBIDDEN.toString());
+        } catch (Exception e) {
+            log.debug("Exception Login {}", HttpStatus.INTERNAL_SERVER_ERROR.toString());
+            log.debug("Exception Login {}", e.getMessage());
+            log.debug("Exception Login {}", e.getCause());
+        }
+    }
+
+    // for 500 user not found
+
+    protected void userNotFound(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            // add body
+            Response statusResponse = Response.builder()
+                    .status(HttpStatus.FORBIDDEN.toString())
+                    .message("Login Failed")
+                    .data("Username is not found")
+                    .build();
+            Object body = new ResponseEntity<>(statusResponse, HttpStatus.FORBIDDEN);
+            response.setContentType("application/json");
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            response.getWriter().write(new Gson().toJson(body));
+            response.getWriter().flush();
+
+            log.debug("Response Login {}", HttpStatus.FORBIDDEN.toString());
+        } catch (Exception e) {
+            log.debug("Exception Login {}", HttpStatus.INTERNAL_SERVER_ERROR.toString());
+            log.debug("Exception Login {}", e.getMessage());
+            log.debug("Exception Login {}", e.getCause());
+        }
+    }
+}
+
+```
+
+### 2.7 JWTAuthorizationFilter
+```
+package com.deni.microservices.auth.security.filter;
+
+import com.auth0.jwt.JWT;
+import com.deni.microservices.auth.common.controller.Response;
+import com.deni.microservices.auth.security.config.UserPrincipal;
+import com.deni.microservices.auth.module.user.entity.User;
+import com.deni.microservices.auth.module.user.repo.UserRepo;
+import com.google.gson.Gson;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
+
+public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
+    private UserRepo userRepository;
+
+    public JwtAuthorizationFilter(AuthenticationManager authenticationManager, UserRepo userRepository) {
+        super(authenticationManager);
+        this.userRepository = userRepository;
+    }
+
+    @Override // api public akan di filter di function ini, apakah header sudah sesuai dengan yg diminta oleh security
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
+        // Read the Authorization header, where the JWT token should be
+        String header = request.getHeader(JwtProperties.TOKEN_X_KEY);
+
+        // If header does not contain X-AUTH-TOKEN or is null delegate to Spring impl and exit
+        if (header == null || !header.startsWith(JwtProperties.TOKEN_PREFIX)) {
+            chain.doFilter(request, response);
+            return;
+        }
+
+        // If header is present, try grab user principal from database and perform authorization
+        Authentication authentication = getUsernamePasswordAuthentication(request);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        // Continue filter execution
+        chain.doFilter(request, response);
+    }
+
+    private Authentication getUsernamePasswordAuthentication(HttpServletRequest request) {
+        // test get data dari redis
+        //String redisToken = (String) redisRepo.getValueRaw(JwtProperties.TOKEN_X_KEY);
+
+        // get token from header client
+        String token = request.getHeader(JwtProperties.TOKEN_X_KEY)
+                .replace(JwtProperties.TOKEN_PREFIX, "");
+
+        if (token != null) {
+            // parse the token and validate it
+            String userName = JWT.require(HMAC512(JwtProperties.TOKEN_SECRET.getBytes()))
+                    .build()
+                    .verify(token)
+                    .getSubject();
+
+            // Search in the DB if we find the user by token subject (username)
+            // If so, then grab user details and create spring auth token using username, pass, authorities/roles
+            if (userName != null) {
+                User user = userRepository.findByUsername(userName);
+                UserPrincipal principal = new UserPrincipal(user);
+                UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(userName, null, principal.getAuthorities());
+                return auth;
+            }
+            return null;
+        }
+        return null;
+    }
+
+
+    protected void onUnsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException
+    {
+        // add body
+        Response statusResponse = Response.builder()
+                .status(HttpStatus.FORBIDDEN.toString())
+                .message("Cannot akses")
+                .data("Cannot akses")
+                .build();
+        Object body = new ResponseEntity<>(statusResponse, HttpStatus.FORBIDDEN);
+        response.setContentType("application/json");
+        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+        response.getWriter().write(new Gson().toJson(body));
+        response.getWriter().flush();
+
+    }
+
+}
+
+```
