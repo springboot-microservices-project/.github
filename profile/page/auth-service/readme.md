@@ -2,20 +2,20 @@
 
 # Auth Service
 
-- [Design](#1-design)
-- [Tech Spesification](#21-tech-spec)
-- [Librarries](#22-librarries)
-- [Pom.xml](#23-pomxml)
-- [Application.yml](#24-applicationyml)
-- [SecurityConfiguration](#25-securityconfiguration)
-- [Jwtauthenticationfilter](#26-jwtauthenticationfilter)
-- [Jwtauthorizationfilter](#27-jwtauthorizationfilter)
+- [Design](#design)
+- [Tech Spesification](#tech-Specification)
+- [Librarries](#librarries)
+- [Pom.xml](#pomxml)
+- [Application.yml](#applicationyml)
+- [SecurityConfiguration](#securityconfiguration)
+- [Jwtauthenticationfilter](#jwtauthenticationfilter)
+- [Jwtauthorizationfilter](#jwtauthorizationfilter)
 
 ## Design
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/auth-service-architecture.jpg?raw=true)
 
 
-## 2.1 Tech Spec
+## Tech Specification
 | Name  |
 |----|
 | Springboot 2.7^  |
