@@ -9,7 +9,7 @@
 - [cors](#cors)
 
 ## Design
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/master-service/master-service-design.png?raw=true)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/report-service/report-service-design.png?raw=true)
 
 
 ## Tech Specification
