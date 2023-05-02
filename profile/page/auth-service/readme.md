@@ -4,10 +4,10 @@
 
 - [Design](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#1-design)
 - [Tech Spesification](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#21-tech-spec)
-- [Librarries](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#22-- librarries)
+- [Librarries](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#22-librarries)
 - [Pom.xml](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#23-pomxml)
 - [Application.yml](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#24-applicationyml)
-- [SecurityConfiguration](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#25-[](securityconfiguration)
+- [SecurityConfiguration](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#25-securityconfiguration)
 - [Jwtauthenticationfilter](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#26-jwtauthenticationfilter)
 - [Jwtauthorizationfilter](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/readme.md#27-jwtauthorizationfilter)
 
