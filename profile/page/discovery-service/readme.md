@@ -6,6 +6,7 @@
 - [Tech Spesification](#tech-specification)
 - [Pom.xml](#pomxml)
 - [Application.yml](#applicationyml)
+- [MainApp](#mainapp)
 
 ## Design
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/discovery-service-up.png?raw=true)
@@ -86,4 +87,21 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 ```
+## MainApp
+```
+package com.deni.microservices.discovery;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class MainApp {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MainApp.class, args);
+    }
+
+}
+```
