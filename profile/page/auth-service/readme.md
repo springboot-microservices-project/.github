@@ -288,3 +288,91 @@ custom:
 
 
 ```
+
+### 2.5 SecurityConfiguration
+```
+package com.deni.microservices.auth.security.config;
+
+import com.deni.microservices.auth.adapter.redis.repo.RedisRepo;
+import com.deni.microservices.auth.module.user.repo.UserRepo;
+import com.deni.microservices.auth.security.filter.JwtAuthenticationFilter;
+import com.deni.microservices.auth.security.filter.JwtAuthorizationFilter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+/**
+ * Created by denitiawan on 18/08/2022.
+ */
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true) // this setting for enable the annotation @Secured
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    RedisRepo redisRepo;
+    private UserPrincipalDetailsService userPrincipalDetailsService;
+    private UserRepo userRepo;
+
+    public SecurityConfiguration(UserPrincipalDetailsService service, UserRepo userRepo) {
+        this.userPrincipalDetailsService = service;
+        this.userRepo = userRepo;
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // setting auth dari database  table user
+        auth.authenticationProvider(authenticationProvider());
+
+    }
+
+    // registrasikan jwt disini
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+
+        // remove csrf and state in session because in jwt we do not need them
+        http.csrf().disable();
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        // add jwt filters (1. authentication, 2. authorization)
+        http.addFilter(new JwtAuthenticationFilter(authenticationManager(), redisRepo));
+        http.addFilter(new JwtAuthorizationFilter(authenticationManager(), userRepo));
+        http.authorizeRequests();
+
+        // login
+        http.authorizeRequests().antMatchers("/login").permitAll();
+        http.authorizeRequests().antMatchers("/api/user/register").permitAll();
+                
+        // any endpoint authenticated
+        http.authorizeRequests().anyRequest().authenticated();
+
+    }
+
+
+    // function untuk ambil data user dari table user untuk auth
+    @Bean
+    DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
+        daoAuthenticationProvider.setUserDetailsService(this.userPrincipalDetailsService);
+
+        return daoAuthenticationProvider;
+    }
+
+    // untuk password encoder yg akan dipakai oleh configure AuthenticationManagerBuilder
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+
+```
