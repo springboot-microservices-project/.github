@@ -9,7 +9,7 @@
 - [cors](#cors)
 
 ## Design
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/schtransaction-service/transaction-service-design.png?raw=true)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/trans-service/transaction-service-design.png?raw=true)
 
 
 ## Tech Specification
