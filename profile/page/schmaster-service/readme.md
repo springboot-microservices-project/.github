@@ -150,7 +150,7 @@ spring:
 
   # profile
   profiles:
-    active: docker
+    active: dev
 
   # app name
   application:
