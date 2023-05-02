@@ -11,12 +11,11 @@
 - [Jwtauthenticationfilter](#26-jwtauthenticationfilter)
 - [Jwtauthorizationfilter](#27-jwtauthorizationfilter)
 
-## 1. Design
+## Design
 ![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/auth-service/auth-service-architecture.jpg?raw=true)
 
-## 2. System Spec
 
-### 2.1 Tech Spec
+## 2.1 Tech Spec
 | Name  |
 |----|
 | Springboot 2.7^  |
@@ -30,7 +29,7 @@
 | eureka-client| 
 
 
-### 2.2 Librarries
+## Librarries
 
 | Name  | Version | 
 |----|----|
@@ -51,7 +50,7 @@
 | gson| latest|
 | spring-security-config| latest|
 
-### 2.3 Pom.xml
+## Pom.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -232,7 +231,7 @@
 
 ```
 
-### 2.4 application.yml
+## application.yml
 ```
 #server port http
 server:
@@ -298,7 +297,7 @@ custom:
 
 ```
 
-### 2.5 SecurityConfiguration
+## SecurityConfiguration
 ```
 package com.deni.microservices.auth.security.config;
 
@@ -386,7 +385,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 ```
 
-### 2.6 JWTAuthenticationFilter
+## JWTAuthenticationFilter
 ```
 package com.deni.microservices.auth.security.filter;
 
@@ -564,7 +563,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
 ```
 
-### 2.7 JWTAuthorizationFilter
+## JWTAuthorizationFilter
 ```
 package com.deni.microservices.auth.security.filter;
 
