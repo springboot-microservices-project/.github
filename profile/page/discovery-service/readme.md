@@ -2,24 +2,106 @@
 
 # Discovery Service
 
-## 1. Features
-- a
-- b
-- c
+- [Design](#design)
+- [Tech Spesification](#tech-specification)
+- [Pom.xml](#pomxml)
+- [Application.yml](#applicationyml)
+- [MainApp](#mainapp)
+
+## Design
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/discovery-service-up.png?raw=true)
 
 
-## 2. System Spec
-
-### 2.1 Tech Spec
+## Tech Specification
 | Name  |
 |----|
 | Springboot 2.7^  |
 | Java 11 |
-|  |
+| liquibase|
+| eureka-client|
+| rabbit-mq|
+| mysql|
+| spring-jpa|
 
 
-### 2.2 Librarries
 
-| Name  | Version | 
-|----|----|
-| | |
+## Pom.xml
+```
+ <dependencies>
+
+
+
+
+		<!-- spring actuator metric point-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--prometheus metric end point-->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- eureka client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+```
+
+## Application.yml
+```
+#server port http
+server:
+  port: 8761
+  
+  
+spring:
+
+  # profile
+  profiles:
+    active: docker
+
+    # app name
+  application:
+    name: discovery-service
+
+    # used on rabbit mq config, for allowing multiple  @bean function
+  main:
+    allow-bean-definition-overriding: true  
+  
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+```
+## MainApp
+```
+package com.deni.microservices.discovery;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class MainApp {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MainApp.class, args);
+    }
+
+}
+```
