@@ -5,4 +5,4 @@
 
 
 
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/microservice-architecture-SMP.jpg?raw=true)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/microservice-architecture-SMP.jpg?raw=true)
