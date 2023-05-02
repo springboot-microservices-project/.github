@@ -3,7 +3,7 @@
 # Gateway Service
 
 ## Spring Cloud Gateway
-![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/springcloud-gateway-architecture.png?raw=true)
+![alt text](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/image/springcloud-gateway-design.png?raw=true)
 
 ## Already Implemented
 - [**Routing**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-routing.md) 
