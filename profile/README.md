@@ -1,5 +1,5 @@
 # 1. what is 'Springboot Microservices Project'?
-This is an backend server with Microservice architecture made using Springboot and frontend made using react. all services will run on docker containers, for simplify develop, deploy and testing
+This is an prototype of backend server with Microservice architecture made using Springboot and frontend made using react. this project just a template and we can customize what bussines needed, and than all services will run on docker containers for simplify develop, deploy and testing
 
 ### 1.1. Already implements
 - Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
