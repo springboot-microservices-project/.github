@@ -1,7 +1,7 @@
-# 1. what is 'Springboot Microservices Project'?
+# Springboot Microservices Project
 This is an prototype of backend server with Microservice architecture made using Springboot and frontend made using react. this project just a template and we can customize what bussines needed, and than all services will run on docker containers for simplify develop, deploy and testing
 
-### 1.1. Already implements
+## Already implements
 - Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
 - Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
@@ -28,7 +28,7 @@ This is an prototype of backend server with Microservice architecture made using
 
 
 
-### 1.2. Backend Technologies
+## Backend Technologies
 `Springboot 2.7^`
 `Java 11`
 `Spring Security`
@@ -59,7 +59,7 @@ This is an prototype of backend server with Microservice architecture made using
 `microserivices`
 
 
-#### 1.2.1. Repositories
+### Backend Repositories
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
 | discovery-service | private | [...](https://github.com/denitiawan/springboot-microservices-discovery) |
@@ -75,7 +75,7 @@ This is an prototype of backend server with Microservice architecture made using
 
 
 
-### 1.3. Frontend Technologies
+## Frontend Technologies
 `React.js`
 `Redux Multi Store`
 `i18n Multi Resource`
@@ -91,13 +91,13 @@ This is an prototype of backend server with Microservice architecture made using
 `Docker-compose`
 
 
-#### 1.3.1 Repositories
+### Frontend Repositories
 | Project Name     | Visibility     | Description  | URL Repository                                                          | 
 |------------------|--------------|--------------|-------------------------------------------------------------------------|
 | Web C-Panel | private | Web project | [...](https://github.com/denitiawan/springboot-microservices-web) |
 
 
-### 1.4. Documentation Types
+## Documentation Types
 `FSD`
 `TSD`
 `Diagram and Arsitektur (drawio)`
@@ -109,22 +109,20 @@ This is an prototype of backend server with Microservice architecture made using
 `all technical notes`
 
 
-### 1.4.1 repository
+### Document repository
 | Project Name     | Visibility  | URL Repository                                                          | 
 |------------------|--------------|-------------------------------------------------------------------------|
 | documentation-service | private | [...](https://github.com/denitiawan/springboot-microservices-documentation) |
 
 
-# 
 
-
-# 2. How to run the application? you can try it using Docker Compose
+## How to run the application? you can try it using Docker Compose
 - clone `setup` repository on this link https://github.com/springboot-microservices-project/setup
 - after clone, open folder `./docker-compose/spring_microservices` in `terminal` or `cmd`
 - on `terminal` or `cmd` type this commands `docker-compose up -d`
 - wait until all aplication running well
 
-## 2.1.  Testing
+## Testing
 | Name     | URL      | client access |
 |--------|--------------|--------------|
 | Web C-Panel | http://localhost:3006 | Browser |
@@ -132,7 +130,7 @@ This is an prototype of backend server with Microservice architecture made using
 | Grafana Server  | http://localhost:3000 | Browser |
 | Prometheus Server  | http://localhost:9090 | Browser |
 
-### 2.2.1. Redis CLI
+## Syntax for Redis CLI
 - open cmd
 - type `docker container exec -it spring_microservices_redis  redis-cli -h 127.0.0.1 -p 6379 -a "password123"` enter
 - see all keys `keys *`
@@ -140,7 +138,7 @@ This is an prototype of backend server with Microservice architecture made using
 - set key `set <keyname> <value>`
 - see TTL `ttl <keyname>`
 
-### 2.2.3.   Api Collection (Postman)
+## Api Collection (Postman)
 - see on this link [Springboot-Microservices.postman_collection.json](https://github.com/denitiawan/springboot-microservices-documentation/blob/main/environtment/api-collections/collection/Springboot-Microservices_v0.0.5.postman_collection.json)
 
 | Name | URL | Method | body |
