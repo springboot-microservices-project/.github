@@ -1,7 +1,8 @@
 # Springboot 2 Microservices
-This is an prototype of backend server with Microservice architecture made using Springboot and frontend made using react. this project just a template and we can customize what bussines needed, and than all services will run on docker containers for simplify develop, deploy and testing
+Building microservice using springboot 2 as backend and react js as frontend. apps will running on kubernetes with argocd as tools.
+And this project just a template and we can customize what bussines needed.
 
-## Implements
+## Projects Informations
 - Implement [**Microservices Architectures**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/architectures/readme.md) on Springboot Projects as a backend services
 - Implement [**Discovery services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/discovery-service/readme.md) using **Eureka Server** for automatic registration all services and automatic find ip and hostname
 - Implement [**Gateway services**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/readme.md) using **Springcloud gateway** for routing every end point on microservices
@@ -20,6 +21,29 @@ This is an prototype of backend server with Microservice architecture made using
 - Implement [**Spring actuator & prometheus metric**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-spring-actuator-prometheus-metric.md) on gateway service 
 - Implement **resilence4j** on gawateway service, for handling [**ratelimiter**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-ratelimmiter.md) and [**circuit breaker**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-circuitbreaker.md) on every end point
 - Implement **Monitoring API** using [**Prometheus and Grafana**](https://github.com/springboot-microservices-project/.github/blob/main/profile/page/gateway-service/page/gateway-prometheus-grafana-monitoring.md)
+
+## User Interface
+### Service Discovery
+<img src="https://github.com/user-attachments/assets/74709e73-7af3-4d30-9da5-7d15554170c0" width="700">
+
+### Frontend 
+<img src="https://github.com/user-attachments/assets/2e4e2c1d-cc68-4489-ad68-8fb23ed7dff5" width="300">
+<img src="https://github.com/user-attachments/assets/29a6bf0f-8eac-4196-a88c-7afc685b956c" width="600">
+
+### Rabbitmq
+<img src="https://github.com/user-attachments/assets/d3f2c2fd-b19e-4ebb-8f05-af8f30f2e225" width="700">
+
+### Prometheus & Grafana
+<img src="https://github.com/user-attachments/assets/e6cbe86e-d9df-4313-b8e1-2faf13a4a82d" width="400">
+<img src="https://github.com/user-attachments/assets/58fca8a0-9b03-4392-80a9-e790b1ec04b3" width="400">
+
+
+## Deployment
+### Kubernetes
+<img src="https://github.com/user-attachments/assets/e97954b6-2eee-4ea3-a61c-ed5b33958ec8" width="400">
+
+### Argo CD
+<img src="https://github.com/user-attachments/assets/de4edfeb-c5fb-438e-b7b1-e05bcc09d084" width="400">
 
 ## Technologies
 - **backend** : `Springboot 2.7^` `Java 11` `Spring Security` `JWT ` `Oauth0` `Mysql` `liquibase (database migration)` `cors` `swagger` `resillent4j` `springActuator` `elasticSearch` `MySql` `Redis` `RabbitMQ` `Springcloud Gateway` `Eureka Discovery Service` `Rate Limmiter` `Circuit Breaker` `SMPTGmail` `reportPDF` `reportExcel` `logback` `Spring JPA` `JPA Audit` `Docker` `Docker-compose` `microserivices`
